@@ -1,4 +1,13 @@
-
+torch>=2.4.0
+transformers>=4.45.0
+accelerate>=0.33.0
+bitsandbytes>=0.44.0
+requests>=2.32.0
+fastapi>=0.115.0
+uvicorn>=0.30.0
+jinja2>=3.1.4
+pydantic>=2.9.0
+ecdsa>=0.19.0
 ### 2. Full file structure & code (create these files exactly)
 
 **requirements.txt**
