@@ -1,0 +1,14 @@
+from pydantic import BaseModel, Field
+from typing import List
+from datetime import datetime
+
+class Provenance(BaseModel):
+    model_name: str = Field(..., description="Unique model identifier")
+    params: int = Field(..., ge=1, description="Parameter count")
+    training_flops: float = Field(..., ge=0, description="Total training FLOPs")
+    dataset_fingerprints: List[str] = Field(..., description="SHA256 hashes of datasets")
+    training_config_hash: str = Field(..., description="SHA256 of full config YAML/JSON")
+    final_checkpoint_hash: str = Field(..., description="SHA256 of model weights")
+    timestamp: datetime = Field(..., description="ISO8601 training completion")
+    lab: str = Field(..., description="Releasing organization")
+    signature: str = Field(..., description="ECDSA sig of above fields")
