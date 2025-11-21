@@ -1,0 +1,14 @@
+
+**schema/provenance_schema.json** 
+```json
+{
+  "model_name": "string",
+  "params": "integer",
+  "training_flops": "float",
+  "dataset_fingerprints": ["sha256"],
+  "training_config_hash": "sha256",
+  "final_checkpoint_hash": "sha256",
+  "timestamp": "iso8601",
+  "lab": "string",
+  "signature": "ed25519"
+}
